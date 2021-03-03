@@ -1,11 +1,11 @@
 # The-AgEvent-theory
 A theory to re-phrase or re-describe the Relation of an Agent to the Environment in Reinforcement-Learning(RL).
+This thoery states that "One's Actions are the States to the other".
 
 # Brief Note:
-The statements below are for educational purposes only, Which defines the relationship between an Agent and Environment in Reinforcement-Learning(RL) in a more clear point-of-view. That is that how both terms are identical or non-identical to one-another based on their behviour, functionality and infrastructure.
+The statements below are for educational purposes only, Which defines the relationship between an Agent and Environment in Reinforcement-Learning(RL) in a more clear point-of-view. That is that how both terms are identical or non-identical to one-another based on their behaviour, functionality and infrastructure.
 
 ## The need of re-description.
-[You can skip this]
 
 ![DNN model](https://user-images.githubusercontent.com/78195281/109762634-f1a24380-7c16-11eb-8f72-b82f822f6299.png)
 
