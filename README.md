@@ -7,7 +7,8 @@ The statements below are for educational purposes only, Which defines the relati
 ## The need of re-description.
 [You can skip this]
 
-![alt text](https://github.com/Sikander-SD/The-AgEvent-theory/blob/images/Basic.png?raw=true)
+![DNN model](https://user-images.githubusercontent.com/78195281/109762634-f1a24380-7c16-11eb-8f72-b82f822f6299.png)
+
 
 As the image above is simple, A DNN-model takes input(data) and give output(prediction) and to be more accurate in predictions, The model weights has to be updated timely with a loss function. A loss function in normaly speaking is a function which calculates the difference between the Lable of the data and the Prediction by the model (loss = y - pred). This is quite simple when we are working on a model which is based on Supervised Machine Learning, But when it comes to Unsupervised Machine Learning, we do not have any access or approach to Labels. We only have the input Data wihout Labels.Then in that case we can not calculate the loss in the same way as we do|did in Supervised Machine Leaning.
 
@@ -18,7 +19,8 @@ I went to google and searched for RL. I go through Actor-Critic, DDPG, Q-Learnin
 ## The basic architecture
 Below are the three images presenting the same basic theory of Reinforcement-learning in three different ways  for the sake of understanding.
 
-![alt text](https://github.com/Sikander-SD/The-AgEvent-theory/blob/images/reinforcement%20learning%20Agent%20and%20Environment%20sturcture.png?raw=true)
+![reinforcement learning Agent and Environment sturcture](https://user-images.githubusercontent.com/78195281/109762702-0bdc2180-7c17-11eb-897b-92ef53382b2c.png)
+
 
 ### Image 1: 
   It is the basic concept that all reinforcement learning algorithms follows, That is there is an Agent that acts on the Environment when given a state of the environment to the Agent. And the Environment returns the next state of itself back to the Agent with some reward. This reward is used to calculate the loss.
@@ -39,7 +41,8 @@ Below are the three images presenting the same basic theory of Reinforcement-lea
 ## Comparing the modified architecture with original ones.
 The below image shows the difference between Acto-Critic, DDPG and DDPG-Lite(modified version) and why i had to modify to DDPG-Lite.
 
-![alt text](https://github.com/Sikander-SD/The-AgEvent-theory/blob/images/comparing%20RL%20architectures.png?raw=true)
+![comparing RL architectures](https://user-images.githubusercontent.com/78195281/109762737-1b5b6a80-7c17-11eb-8d93-8e4f0269ecd3.png)
+
 
 ### Actor-Critic:
   This architecture is using an Actor which acts on the Environment to estimate the future rewards from the Environment and the Critic is a small model that estimates the future reward for the Actor. The Environmnet then returns its state back to the Actor with actual rewards. The calculation is done as [loss = actual - estimated].
@@ -57,5 +60,7 @@ More details can be found on https://keras.io/examples/rl/ddpg_pendulum.
 
 
 
-![alt text](https://github.com/Sikander-SD/The-AgEvent-theory/blob/images/ditricircle.png?raw=true)
-![alt text](https://github.com/Sikander-SD/The-AgEvent-theory/blob/images/chessboard.png?raw=true)
+![ditricircle](https://user-images.githubusercontent.com/78195281/109762810-3af29300-7c17-11eb-88c9-63e848aa5520.png)
+![The AgEvent theory](https://user-images.githubusercontent.com/78195281/109762824-3ded8380-7c17-11eb-855e-deac49faaa65.png)
+![The AgEvent theory](https://user-images.githubusercontent.com/78195281/109762883-4e9df980-7c17-11eb-98ed-3040fa41e6ee.png)
+
