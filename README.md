@@ -3,37 +3,39 @@ A theory to re-phrase or re-describe the Relation of an Agent to the Environment
 This thoery states that "One's Actions are the States to the other".
 
 # Brief Note:
-The statements below are for educational purposes only, Which defines the relationship between an Agent and Environment in Reinforcement-Learning(RL) in a more clear point-of-view. That is that how both terms are identical or non-identical to one-another based on their behaviour, functionality and infrastructure.
+The statements below defines the relationship between an Agent and Environment in Reinforcement-Learning(RL) in a more clear point-of-view. That is that how both terms are identical or non-identical to one-another based on their behaviour, functionality and infrastructure.
 
 ## The need of re-description.
 
 ![DNN model](https://user-images.githubusercontent.com/78195281/109762634-f1a24380-7c16-11eb-8f72-b82f822f6299.png)
 
 
-As the image above is simple, A DNN-model takes input(data) and give output(prediction) and to be more accurate in predictions, The model weights has to be updated timely with a loss function. A loss function in normaly speaking is a function which calculates the difference between the Lable of the data and the Prediction by the model (loss = y - pred). This is quite simple when we are working on a model which is based on Supervised Machine Learning, But when it comes to Unsupervised Machine Learning, we do not have any access or approach to Labels. We only have the input Data wihout Labels.Then in that case we can not calculate the loss in the same way as we do|did in Supervised Machine Leaning.
+As the image above is simple, A DNN-model takes input(data) and gives output(prediction) and to be more accurate in predictions, The model weights has to be updated timely with a loss function. A loss function in normaly speaking is a function which calculates the difference between the Lable of the data and the Prediction by the model (loss = y - pred). This is quite simple when we are working on a model which is based on Supervised Machine Learning, But when it comes to Unsupervised Machine Learning, we do not have any access or approach to Labels. We only have the input Data wihout Labels. Then in that case we can not calculate the loss in the same way as we do|did in Supervised Machine Leaning.
 
-I am working on a project that is entirely based on Unsupervised Machine|Deep Leaning and i had to find out to calclute the loss for my model to update the weights. The usual methods were not leading to anywhere, Then i decide to learn about Reinforement Learing, That what is it and how does it works?
+I am working on a project that is entirely based on Unsupervised Machine|Deep Leaning and i had to find out to calclute the loss for my model to update the weights. The usual methods were not leading me to anywhere close to what i actually want, Then i decide to learn about Reinforement Learing like "What is it?" and "How does it works?" specially "How RL calculates the loss?".
 
-I went to google and searched for RL. I go through Actor-Critic, DDPG, Q-Learning and "some others which i could not understand much". Then i found that these methods (Actor-critic, DDPG, Q-Learning) are actually using a DNN-model to just get a Value which can be used in loss calculation, And then i dig-in to understand more about how they works line-by-line and i plotted the sturcutures in the images below.
+I went to google and searched for RL. I go through Actor-Critic, DDPG, Q-Learning and "some others which i could not understand much". Then i found that these methods (Actor-critic, DDPG, Q-Learning) are actually using a DNN-model to just get a Value which can be used as label in loss calculation, And then i dig-in to understand more about how they works line-by-line and i plotted the sturcutures in the images below.
 
 ## The basic architecture
-Below are the three images presenting the same basic theory of Reinforcement-learning in three different ways  for the sake of understanding.
+Below are the three images presenting the same basic theory of Reinforcement-learning in three different ways for the sake of understanding.
 
 ![reinforcement learning Agent and Environment sturcture](https://user-images.githubusercontent.com/78195281/109762702-0bdc2180-7c17-11eb-897b-92ef53382b2c.png)
 
 
 ### Image 1: 
-  It is the basic concept that all reinforcement learning algorithms follows, That is there is an Agent that acts on the Environment when given a state of the environment to the Agent. And the Environment returns the next state of itself back to the Agent with some reward. This reward is used to calculate the loss.
+  It is the basic concept which all the reinforcement learning algorithms follows, That is- There is an Agent which acts on the Environment when given a state of the environment to the Agent. And the Environment returns the next state of itself back to the Agent with some reward. This reward is used to calculate the loss.
 
 ### Image 2:
-  This is the extended and modified version of the basic concept of Reinforcement Learning algorithm. Or We can say that i made some modification to the basic concept of Reinforcement Learning algorithm based on my needs to calculate loss. That is there is an Agent that acts on the Environment to estimate the future reward in return from the Environment and then the Environment takes that action as a state of the Agent and further acts back to the Agent with an action to estimate its own future reward and then that action of the Environment again becomes a state of the Environment to the Agent. The loss here now is the difference of both estimated future rewards of Agent and Environment.
+  This is the extended and modified version of the basic concept of Reinforcement Learning algorithm. Or We can say that i made some modification to the basic concept of Reinforcement Learning algorithm based on my needs of loss calculation. That is- There is an Agent which acts on the Environment to estimate the future reward in return from the Environment and then the Environment takes that action as a state of the Agent and further acts back to the Agent with an action to estimate its own future reward and then that action of the Environment again becomes a state of the Environment to the Agent. The loss here now is the difference of both estimated future rewards of Agent and Environment.
 
 ### Image 3:
   This image is just to show the continues cycle among Agnet and Environment.
-  Precisely speaking, The image presents the transitions of
+  Precisely speaking, The image presents the transitions:
   
-  Env_State -> Agent -> Ag_State -> Environment -> Env_State
+  Env_State -> Agent -> Action -> Agent_State -> Environment -> Env_State
+  
                  V                      V
+                 
            estimated reward      estimated reward
 
   More detailes are below.
