@@ -32,11 +32,9 @@ Below are the three images presenting the same basic theory of Reinforcement-lea
   This image is just to show the continues cycle among Agnet and Environment.
   Precisely speaking, The image presents the transitions:
   
-  Env_State -> Agent -> Action -> Agent_State -> Environment -> Env_State
-  
-                 V                      V
-                 
-           estimated reward      estimated reward
+    Env_State -> Agent -> Action -> Agent_State -> Environment -> Env_State  
+                   V                      V
+             estimated reward      estimated reward
 
   More detailes are below.
 
