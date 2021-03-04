@@ -16,9 +16,7 @@ Basiclly, one expects somthing from the other when it performs an action.
 The player-1 performs its move based on the state of the game to predict that this move may lead the player-1 to the win.
 On the other side, The player-2 sees the move of the player-1 which now is a new state of the game and then the player-2 does the same as player-2; Performes its move based on the state of game to predict that this move may lead the player-2 to the win.
 
-Both the player keep doing the same thing, Hence "One's Actions are the States to the Other."
-
-if we image that the player-1 is Agent and player-2 is Environment then you can see that the only difference is the name and the mind(structure), Otherwise they both are doing the same thing to each-ther over and over.
+if we image that the player-1 is Agent and player-2 is Environment then you can see that the only difference is the name and the mind(structure), Otherwise they both are doing the same thing to each-ther over and over. Hence "One's Actions are the States to the Other."
 
 
 ## The need of re-description
@@ -93,7 +91,7 @@ More details can be found on https://keras.io/examples/rl/ddpg_pendulum.
   To the top side of the diagram:
     The new State of the Environment becomes the State of the Environment and follow the whole process again from the state to the acton and then to  the new-state.
     
-   we can go from top-left to down to top-right or the reverse. "How is it possible to go reverse?", that why the theory states "One's Actions are the States to the other."
+   We can go from top-left to down to top-right or the reverse. "Is it possible to go reverse?", YES! That is why the theory states "One's Actions are the States to the other."
 
 # Full image of The-AgEvent-theory ( "One's Actions are the  States to the other." )
 ![The AgEvent theory](https://user-images.githubusercontent.com/78195281/109762883-4e9df980-7c17-11eb-98ed-3040fa41e6ee.png)
